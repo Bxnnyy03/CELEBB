@@ -1,0 +1,803 @@
+/* Reset & Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* เอา font-family ออกจาก * เพื่อไม่บังคับทุก element */
+}
+
+body {
+  font-family: 'Prompt', sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+  background: #fff;
+  color: #222;
+}
+
+/* กำหนดฟ้อนต์หัวข้อให้ใช้ Libertinus Serif ตัวหนา */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Libertinus Serif', serif;
+  font-weight: 700; /* ตัวหนา */
+  color: #333; /* หรือสีอื่นตามต้องการ */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+
+.bg-light {
+  background: #f9f9f9;
+}
+
+/* Navbar */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: #ffffffcc;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  z-index: 1000;
+}
+
+.navbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+}
+
+.logo {
+  font-weight: 600;
+  font-size: 1.4rem;
+  color: #4dc4d2;
+  text-decoration: none;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links a {
+  color: #333;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #4dc4d2;
+}
+
+/* Hero Section */
+.hero {
+  height: 100vh;
+  background: linear-gradient(to bottom right, #4dc4d2, #aef1f8);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+  color: white;
+}
+
+.hero h1 {
+  font-size: 2.8rem;
+  font-weight: 600;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-top: 1rem;
+}
+
+/* Headings */
+h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #4dc4d2;
+}
+
+/* Content Blocks */
+section p,
+section ul {
+  font-size: 1.05rem;
+  margin: 0.5rem 0;
+}
+
+ul {
+  padding-left: 1.2rem;
+}
+
+ul li {
+  margin-bottom: 0.6rem;
+}
+
+/* Services Grid */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+
+.service-item {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.service-item:hover {
+  transform: translateY(-5px);
+}
+
+/* Footer */
+footer {
+  background: #222;
+  color: white;
+  text-align: center;
+  padding: 30px 0;
+  font-size: 0.95rem;
+}
+
+/* Responsive Menu */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+
+  .navbar .container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .logo {
+    margin-bottom: 10px;
+  }
+}
+
+/* Contact Section Styles (Safe Scope) */
+.contact-section-celebspa {
+  padding: 60px 20px;
+  background: #ffffff;
+}
+
+.contact-section-celebspa .contact-container-celebspa {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+.contact-section-celebspa .contact-card-celebspa {
+  background: #f9fcff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+  flex: 1 1 400px;
+  margin-bottom: 20px;
+}
+
+.contact-section-celebspa .contact-card-celebspa i {
+  color: #00BCD4;
+  margin-right: 8px;
+}
+
+.contact-section-celebspa .contact-link-celebspa {
+  color: #00BCD4;
+  text-decoration: none;
+}
+
+.contact-section-celebspa .contact-link-celebspa:hover {
+  text-decoration: underline;
+}
+/* About CelebSpa Section Styling - Scoped */
+.about-celebspa {
+  background: #f9fcff;
+  padding: 60px 0;
+}
+
+.about-block-celebspa {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+  padding: 30px;
+  margin-bottom: 40px;
+  transition: transform 0.3s ease;
+}
+
+.about-block-celebspa:hover {
+  transform: translateY(-4px);
+}
+
+.about-subtitle-celebspa {
+  color: #00BCD4;
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.mission-list-celebspa {
+  padding-left: 1.2rem;
+  margin-top: 1rem;
+}
+
+.mission-list-celebspa li {
+  margin-bottom: 1rem;
+}
+
+.section-title-celebspa {
+  font-size: 2rem;
+  color: #00BCD4;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.small-text-celebspa {
+  font-size: 0.9rem;
+  font-weight: normal;
+  color: #777;
+}
+.centered-intro {
+  text-align: center;
+  font-size: 1.15rem;
+  margin-bottom: 2rem;
+}
+.about-belief-block .about-belief-text {
+  max-width: 700px;
+  margin: 0 auto;
+  font-size: 1.3rem;
+  color: #555; /* สีเทาเข้มจางกว่าดำ */
+  font-weight: 500;
+  text-align: center;
+  line-height: 1.6;
+}
+.about-belief-block .about-belief-text strong {
+  display: block;
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: #333; /* ให้ข้อความไทยเข้มขึ้นเล็กน้อย */
+}
+.about-belief-block .about-belief-text em {
+  font-size: 1.2rem;
+  color: #666;
+  font-style: italic;
+}
+.mission-list-celebspa li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.8rem;
+  margin-bottom: 1.3rem;
+}
+
+.mission-list-celebspa li i {
+  color: #00BCD4;
+  font-size: 1.2rem;
+  margin-top: 6px;
+  flex-shrink: 0;
+}
+
+.mission-list-celebspa .text-content {
+  flex: 1;
+}
+
+.mission-list-celebspa .thai-text {
+  font-weight: 600;
+  color: #222;
+  font-size: 1.05rem;
+  margin-bottom: 0.15rem;
+  line-height: 1.4;
+}
+
+.mission-list-celebspa .eng-text {
+  font-weight: 400;
+  color: #555;
+  font-size: 0.95rem;
+  font-family: 'Prompt', sans-serif;
+  line-height: 1.3;
+  margin: 0;
+}
+
+/* Responsive: บนมือถือลดขนาดข้อความเล็กลง */
+@media (max-width: 600px) {
+  .mission-list-celebspa li {
+    gap: 0.6rem;
+  }
+
+  .mission-list-celebspa .thai-text {
+    font-size: 1rem;
+  }
+
+  .mission-list-celebspa .eng-text {
+    font-size: 0.9rem;
+  }
+}
+/* ...ส่วนอื่นๆ ตามที่คุณให้มา... */
+
+/* ===== Service Slider Section (แก้ไข) ===== */
+.service-slider-celebspa {
+  max-width: 1120px; /* แสดง 3 กล่องเต็ม */
+  margin: 0 auto 60px;
+  overflow: hidden;
+  position: relative;
+  padding: 20px 0;
+}
+
+.service-slider-celebspa-track {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.service-slider-celebspa-box {
+  flex: 0 0 calc((100% / 3) - 13.33px);
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgb(0 0 0 / 0.12);
+  padding: 20px 24px;
+  margin-right: 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+
+.service-slider-celebspa-box:last-child {
+  margin-right: 0;
+}
+
+.service-slider-celebspa-box h4 {
+  font-family: 'Libertinus Serif', serif;
+  font-weight: 700;
+  font-size: 1.3rem;
+  margin-bottom: 8px;
+  color: #222;
+}
+
+.service-slider-celebspa-box h4 span {
+  display: block;
+  font-weight: 400;
+  font-size: 1rem;
+  color: #555;
+  margin-top: 2px;
+}
+
+.service-slider-celebspa-box p {
+  font-size: 0.9rem;
+  color: #555;
+  line-height: 1.4;
+  margin-bottom: 8px;
+  flex-shrink: 0;
+}
+
+.service-slider-celebspa-box p i {
+  font-style: italic;
+  color: #777;
+}
+
+.service-slider-celebspa-box ul {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 4px;
+  flex-grow: 1;
+}
+
+.service-slider-celebspa-box ul li {
+  margin-bottom: 6px;
+  font-size: 0.85rem;
+  color: #444;
+  display: flex;
+  align-items: flex-start;
+  gap: 6px;
+}
+
+.service-slider-celebspa-box ul li i {
+  color: #00BCD4; /* สีฟ้าไอคอน */
+  font-size: 1rem;
+  margin-top: 3px;
+  flex-shrink: 0;
+}
+
+/* ปุ่มเลื่อนซ้ายขวา (แบบเดิม) */
+.service-slider-celebspa-buttons {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  pointer-events: none;
+}
+
+.service-slider-celebspa-buttons button {
+  pointer-events: all;
+  background: rgba(0,0,0,0.06);
+  border: none;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  transition: background 0.3s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #00BCD4; /* สีฟ้าปุ่ม */
+  font-size: 1.3rem;
+}
+
+.service-slider-celebspa-buttons button:hover {
+  background: rgba(0,0,0,0.15);
+}
+
+.service-slider-celebspa-buttons .prev {
+  left: 0;
+}
+
+.service-slider-celebspa-buttons .next {
+  right: 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .service-slider-celebspa {
+    max-width: 540px; /* 2 กล่อง */
+  }
+
+  .service-slider-celebspa-box {
+    flex: 0 0 calc((100% / 2) - 10px);
+  }
+}
+
+@media (max-width: 480px) {
+  .service-slider-celebspa {
+    max-width: 280px; /* 1 กล่อง */
+  }
+
+  .service-slider-celebspa-box {
+    flex: 0 0 100%;
+    margin-right: 0;
+    padding: 16px 20px;
+  }
+}
+/* Aftercare Section Styling */
+.aftercare-section {
+  background-color: #f9fafc;
+  padding: 80px 0;
+  animation: fadeInUp 1s ease-out both;
+}
+
+.container.aftercare-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.aftercare-left {
+  flex: 1 1 60%;
+  min-width: 320px;
+}
+
+.aftercare-right {
+  flex: 1 1 35%;
+  min-width: 280px;
+}
+
+.aftercare-title {
+  font-size: 2.25rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  text-align: left;
+}
+
+.aftercare-subtitle {
+  color: #26c6da;
+  font-size: 1.125rem;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+}
+
+.aftercare-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.aftercare-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  animation: fadeInUp 0.8s ease forwards;
+  opacity: 0;
+}
+
+.aftercare-list li:nth-child(1) { animation-delay: 0.1s; }
+.aftercare-list li:nth-child(2) { animation-delay: 0.3s; }
+.aftercare-list li:nth-child(3) { animation-delay: 0.5s; }
+
+.aftercare-list i {
+  font-size: 1.5rem;
+  color: #26c6da;
+  margin-top: 4px;
+}
+
+.celeb-club-box {
+  background-color: #eefafd;
+  border-radius: 16px;
+  padding: 32px 24px;
+  text-align: center;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+  animation: fadeInRight 1s ease forwards;
+  opacity: 0;
+  animation-delay: 0.6s;
+}
+
+.celeb-club-box h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.celeb-club-box i {
+  color: #26c6da;
+  margin-right: 6px;
+}
+
+.celeb-club-box p {
+  font-size: 0.95rem;
+  color: #555;
+  margin-bottom: 1.25rem;
+}
+
+.btn-club {
+  background-color: #26c6da;
+  color: white;
+  border: none;
+  border-radius: 999px;
+  padding: 10px 24px;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.btn-club:hover {
+  background-color: #00bcd4;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    transform: translateX(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .container.aftercare-wrapper {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .aftercare-left,
+  .aftercare-right {
+    flex: 1 1 100%;
+  }
+
+  .aftercare-title {
+    text-align: center;
+  }
+  /* ==================================================
+   🚚 SHIPPING SECTION (Extended Styling)
+   ================================================== */
+
+/* Section title */
+.shipping-section-title {
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.shipping-section-subtitle {
+  font-size: 1.1rem;
+  text-align: center;
+  color: #666;
+  margin-bottom: 40px;
+}
+
+/* Box */
+.shipping-box-celebspa {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  max-width: 900px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+/* Icon */
+.shipping-icon-celebspa {
+  font-size: 48px;
+  color: #1e88e5;
+  flex-shrink: 0;
+  margin-top: 5px;
+}
+
+/* Content */
+.shipping-content-celebspa {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.shipping-description {
+  font-size: 1rem;
+  color: #444;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Address */
+.shipping-address-celebspa h4 {
+  font-size: 1rem;
+  margin-bottom: 6px;
+  color: #333;
+}
+
+.shipping-address-celebspa p {
+  margin: 0;
+  color: #555;
+  line-height: 1.5;
+}
+
+/* Download button */
+.btn-download-celebspa {
+  display: inline-flex;
+  align-items: center;
+  background-color: #1e88e5;
+  color: #fff;
+  padding: 10px 18px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 500;
+  width: fit-content;
+  transition: background-color 0.3s ease;
+}
+
+.btn-download-celebspa i {
+  margin-right: 8px;
+  font-size: 1.1rem;
+}
+
+.btn-download-celebspa:hover {
+  background-color: #1565c0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .shipping-box-celebspa {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .shipping-icon-celebspa {
+    font-size: 40px;
+    margin-bottom: 10px;
+  }
+
+  .shipping-section-title {
+    font-size: 1.5rem;
+  }
+
+  .shipping-section-subtitle {
+    font-size: 1rem;
+  }
+}
+
+/* Contact Section Custom for CelebSpa */
+.celebspa-contact-section {
+  padding: 60px 20px;
+  background-color: #fff;
+}
+
+.celebspa-contact-wrapper {
+  max-width: 1100px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.celebspa-contact-title {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 40px;
+  font-family: 'Libertinus Serif', serif;
+  color: #111;
+}
+
+.celebspa-contact-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+}
+
+.celebspa-contact-card {
+  flex: 1 1 400px;
+  background: #f9fcff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+  text-align: left;
+}
+
+.celebspa-contact-heading {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: #111;
+  font-family: 'Libertinus Serif', serif;
+}
+
+.celebspa-contact-card p {
+  margin: 10px 0;
+  color: #333;
+  font-size: 0.95rem;
+  display: flex;
+  align-items: center;
+}
+
+.celebspa-contact-card i {
+  color: #00BCD4;
+  margin-right: 8px;
+  font-size: 1.1rem;
+}
+
+.celebspa-contact-card a {
+  color: #00BCD4;
+  text-decoration: none;
+}
+
+.celebspa-contact-card a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .celebspa-contact-card {
+    flex: 1 1 100%;
+  }
+}
