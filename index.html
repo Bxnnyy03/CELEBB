@@ -40,7 +40,22 @@
   </style>
 </head>
 
+
 <body>
+  <!-- ✅ Facebook SDK -->
+  <div id="fb-root"></div>
+  <script async defer crossorigin="anonymous"
+    src="https://connect.facebook.net/th_TH/sdk.js#xfbml=1&version=v23.0"></script>
+
+  <!-- ✅ บังคับ render ปลั๊กอิน (หากปลั๊กอินแทรกทีหลัง) -->
+  <script>
+    window.addEventListener('DOMContentLoaded', function () {
+      if (typeof FB !== 'undefined') {
+        FB.XFBML.parse();
+      }
+    });
+  </script>
+
   <header id="home">
  <header id="home">
   <nav class="navbar">
@@ -375,10 +390,12 @@
       padding: 2rem 1rem;
     }
 
-    .aftercare-title {
-      text-align: center;
-      font-size: 2rem;
-      margin-bottom: 0.5rem;
+   .aftercare-title {
+    font-size: 2.25rem;
+    font-weight: 700;
+    text-align: left;
+    font-family: 'Libertinus Serif', serif;
+    color: #333;
     }
 
     .aftercare-subtitle {
@@ -486,7 +503,7 @@
 
   <div class="aftercare-container">
     <div class="container">
-     <h2 class="section-title-celebspa">Aftercare Program</h2>
+     <h2 class="text-center text-4xl font-bold text-gray-800 mb-4">Aftercare Program</h2>
      <p class="aftercare-subtitle">Preserving Perfection</p>
     <hr class="section-divider-celebspa" />
     </div>
@@ -731,6 +748,140 @@
         <button class="btn-club" disabled>Coming Soon</button>
       </div>
 
+    </div>
+  </div>
+</section>
+
+<section id="shipping" class="nationwide-shipping-section">
+  <div class="container">
+    <h2 class="shipping-title">Shipping Service</h2>
+    <p class="shipping-subtitle">For our customers across the country</p>
+
+    <div class="shipping-box">
+      <div class="shipping-icon">
+        <i class="bi bi-box-seam"></i>
+      </div>
+
+      <div class="shipping-description">
+        <p>
+          ลูกค้าที่อยู่นอกพื้นที่ภูเก็ตสามารถส่งสินค้าทางไปรษณีย์มาที่สาขา Samkong Boutique ได้ พร้อมแนบแบบฟอร์ม (ดาวน์โหลดด้านล่าง)
+        </p>
+        <p>Nationwide shipping available. Please include the service form when sending items.</p>
+        <div class="shipping-address-box">
+          <p><strong><i class="bi bi-geo-alt"></i> Shipping Address:</strong></p>
+          <p>
+            Celeb Spa (Samkong Boutique), Samkong Plaza, 123 Samkong Road, <br />
+            Talat Yai, Mueang Phuket District, Phuket 83000
+          </p>
+        </div>
+      </div>
+
+      <div class="shipping-download">
+        <a href="assets/forms/service-form.pdf" class="btn-download" target="_blank">
+          <i class="bi bi-download"></i> Download Service Form (.pdf)
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section id="contact" class="locations-section">
+  <div class="locations-container">
+    <!-- หัวเรื่อง -->
+    <h2 class="locations-title">
+      <i class="bi bi-geo-alt-fill"></i> Our Locations & Contact
+    </h2>
+
+    <!-- คำแนะนำเบื้องต้น -->
+    <p class="locations-intro">
+      ติดต่อ Celeb เพื่อสอบถามรายละเอียด นัดหมาย หรือปรึกษาปัญหาสินค้าแบรนด์เนมของคุณ<br>
+      <em>We’re here to assist you — whether it’s booking a service, asking a question, or getting expert advice on your luxury items.</em>
+    </p>
+
+    <!-- รายการสาขา -->
+    <div class="locations-grid">
+      <!-- Location 1 -->
+      <div class="location-card fade-in">
+        <h3><i class="bi bi-geo-alt-fill"></i> Central Festival Phuket</h3>
+        <p><i class="bi bi-shop"></i> ชั้น P2 (ฝั่ง TOPS) ห้าง Central Festival Phuket ฝั่ง Festival</p>
+        <p><i class="bi bi-clock"></i> เปิดทุกวัน | Open daily 10:30 AM – 21:00 PM</p>
+        <p><i class="bi bi-telephone"></i> Tel: 095-2979356</p>
+        <a href="https://maps.app.goo.gl/Tpb7JQUGBkqS7c2z5" class="map-link" target="_blank">
+          <i class="bi bi-map"></i> View on Map
+        </a>
+      </div>
+
+      <!-- Location 2 -->
+      <div class="location-card fade-in" style="animation-delay: 0.2s;">
+        <h3><i class="bi bi-geo-alt-fill"></i> Samkong Boutique</h3>
+        <p><i class="bi bi-shop"></i> 236/2 ถ.เยาวราช ต.ตลาดใหญ่ อ.เมือง จ.ภูเก็ต (ตรงข้าม 7-11 เยื้องร้านกล้วยน้ำว้า)</p>
+        <p><i class="bi bi-clock"></i> เปิดทุกวัน (หยุดวันอาทิตย์) | Open daily except Sunday 08:30 AM - 18:00 PM</p>
+        <p><i class="bi bi-telephone"></i> Tel: 099-1919356</p>
+        <a href="https://maps.app.goo.gl/xQhVKoicr1jwmNux6" class="map-link" target="_blank">
+          <i class="bi bi-map"></i> View on Map
+        </a>
+      </div>
+
+      <!-- Location 3 -->
+      <div class="location-card fade-in" style="animation-delay: 0.4s;">
+        <h3><i class="bi bi-geo-alt-fill"></i> Petit Lagoon</h3>
+        <p><i class="bi bi-shop"></i> สาขาใหม่ใกล้ลากูน่า โครงการหรู Petit Lagoon, ภูเก็ต</p>
+        <p><i class="bi bi-hourglass-split"></i> เปิดให้บริการเร็วๆ นี้ | Opening Q3 2026</p>
+        <a href="#" class="map-link" target="_blank">
+          <i class="bi bi-map"></i> View on Map
+        </a>
+      </div>
+    </div>
+
+    <!-- ช่องทางติดต่อ -->
+    <div class="contact-channels fade-in" style="animation-delay: 0.6s;">
+      <h3 class="channels-title">
+        <i class="bi bi-chat-left-text"></i> Channels
+      </h3>
+
+      <p class="channels-subtitle">
+        ทีมงานของเราสามารถให้บริการได้ทั้งภาษาไทยและอังกฤษ<br>
+        <em>Our team is happy to assist in Thai and English.</em>
+      </p>
+
+      <div class="channels-grid">
+        <!-- LINE -->
+        <a href="https://lin.ee/YOUR-LINE-LINK" class="channel-card" target="_blank">
+          <i class="bi bi-line"></i>
+          <div>
+            <strong>LINE Official</strong>
+            <p>@celebrityhouse</p>
+          </div>
+        </a>
+
+        <!-- Facebook -->
+        <a href="https://facebook.com/celebrityhousebagspa" class="channel-card" target="_blank">
+          <i class="bi bi-facebook"></i>
+          <div>
+            <strong>Facebook</strong>
+            <p>@celebrityhousebagspa</p>
+          </div>
+        </a>
+
+        <!-- Instagram -->
+        <a href="https://instagram.com/celebrityhousebagspa" class="channel-card" target="_blank">
+          <i class="bi bi-instagram"></i>
+          <div>
+            <strong>Instagram</strong>
+            <p>@celebrityhousebagspa</p>
+          </div>
+        </a>
+
+        <!-- Email -->
+        <div class="channel-card">
+          <i class="bi bi-envelope"></i>
+          <div>
+            <strong>Email</strong>
+            <p>celebbrandnamespa@gmail.com</p>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
